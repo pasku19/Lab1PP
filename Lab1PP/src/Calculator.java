@@ -96,7 +96,6 @@ public class Calculator extends JFrame{
         }
     }
 
-    // infixata la postfixata
     public String postfix(String expression){
         StringBuilder rez=new StringBuilder();
         Stack<Character> stack=new Stack<>();
@@ -143,7 +142,7 @@ public class Calculator extends JFrame{
         for (String elem : tokens)
         {
             if (Character.isDigit(elem.charAt(0)))
-                stack.push(Double.valueOf(elem)); //converire din string in double
+                stack.push(Double.valueOf(elem));
             else if (isOperator(elem.charAt(0)))
             {
                 double b=stack.pop();
